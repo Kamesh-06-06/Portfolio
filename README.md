@@ -1,2 +1,1 @@
-# Portfolio
-🚀 Personal Portfolio | React.js + Tailwind CSS | Responsive Design | Smooth Animations | Projects &amp; Skills Showcase
+A modern, responsive, and interactive personal portfolio website built using **React.js, Tailwind CSS, and JavaScript** to showcase my skills, projects, education, and experience with smooth animations and a user-friendly design.
