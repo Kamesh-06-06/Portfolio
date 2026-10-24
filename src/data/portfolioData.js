@@ -6,8 +6,9 @@ import { Webhook, ArrowLeftRight, Database, Puzzle, Brain, Users, Shuffle, BookO
 // ---- Edit links here. Empty string = shown as "unavailable" in the UI. ----
 export const links = {
   github: "https://github.com/kamesh-06-06",
-  linkedin: "https://www.linkedin.com/in/kamesh-kamalakannan", 
+  linkedin: "https://www.linkedin.com/in/kamesh-kamalakannan",
   email: "kameshkamalakannan6@gmail.com",
+    instagram: "https://www.instagram.com/kamesh._6",
   phone: "+91 9361782205",
   resume: "/resume.pdf",
 };
