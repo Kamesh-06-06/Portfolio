@@ -1,7 +1,42 @@
-import { SiC, SiCplusplus, SiJavascript,SiPython,SiPostman,SiMaterialdesign,SiGeeksforgeeks,SiLeetcode,SiMongodb, SiHtml5, SiCss, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMysql, SiPostgresql, SiJson, SiGit, SiGithub } from 'react-icons/si'
-import { FaJava } from 'react-icons/fa'
-import { VscVscode } from 'react-icons/vsc'
-import { Webhook, ArrowLeftRight, Database, Puzzle, Brain, Users, Shuffle, BookOpen, ShoppingBag, ListChecks,Trophy, Globe } from 'lucide-react'
+import {
+  SiC,
+  SiCplusplus,
+  SiJavascript,
+  SiPython,
+  SiPostman,
+  SiMaterialdesign,
+  SiGeeksforgeeks,
+  SiLeetcode,
+  SiMongodb,
+  SiHtml5,
+  SiCss,
+  SiReact,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMysql,
+  SiPostgresql,
+  SiJson,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
+import {FaJava} from "react-icons/fa";
+import {VscVscode} from "react-icons/vsc";
+import {
+  Webhook,
+  ArrowLeftRight,
+  Database,
+  Puzzle,
+  Brain,
+  Users,
+  Shuffle,
+  BookOpen,
+  ShoppingBag,
+  ListChecks,
+  Trophy,
+  Globe,
+  Instagram,
+} from "lucide-react";
 
 // ---- Edit links here. Empty string = shown as "unavailable" in the UI. ----
 export const links = {
@@ -10,28 +45,55 @@ export const links = {
   email: "kameshkamalakannan6@gmail.com",
     instagram: "https://www.instagram.com/kamesh._6",
   phone: "+91 9361782205",
-  resume: "/resume.pdf",
+  resume: "./src/data/resume.pdf",
+  Instagram: "https://www.instagram.com/kamesh._.6",
 };
 
 export const profile = {
-  name: 'Kamesh Kamalakannan',
-  location: 'Kumbakonam, Tamil Nadu, India',
-  roles: ['Full Stack Developer', 'Backend Developer', 'Frontend Developer', 'Problem Solver'],
-  intro: "I'm a final-year B.Sc. Computer Science student passionate about building modern, scalable, and user-friendly web applications. I enjoy developing responsive frontend interfaces, creating RESTful APIs, and solving real-world problems through technology.",
+  name: "Kamesh Kamalakannan",
+  location: "Kumbakonam, Tamil Nadu, India",
+  roles: [
+    "Full Stack Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "Problem Solver",
+  ],
+  intro:
+    "I'm a final-year B.Sc. Computer Science student passionate about building modern, scalable, and user-friendly web applications. I enjoy developing responsive frontend interfaces, creating RESTful APIs, and solving real-world problems through technology.",
   about: [
-    'I am Kamesh Kamalakannan, a final-year B.Sc. Computer Science student at SASTRA Deemed to be University.',
-    'I am an aspiring Full Stack and Backend Developer with knowledge of React.js, JavaScript, Node.js, Express.js, MySQL, PostgreSQL, and RESTful API development.',
-    'I enjoy transforming ideas into functional applications and continuously exploring new technologies to improve my development skills.',
-    'My goal is to start my career as a software developer, contribute to meaningful projects, and grow into a skilled software engineer.',
+    "I am Kamesh Kamalakannan, a final-year B.Sc. Computer Science student at SASTRA Deemed to be University.",
+    "I am an aspiring Full Stack and Backend Developer with knowledge of React.js, JavaScript, Node.js, Express.js, MySQL, PostgreSQL, and RESTful API development.",
+    "I enjoy transforming ideas into functional applications and continuously exploring new technologies to improve my development skills.",
+    "My goal is to start my career as a software developer, contribute to meaningful projects, and grow into a skilled software engineer.",
   ],
-  keywords: ['React.js', 'JavaScript', 'Node.js', 'Express.js', 'MySQL', 'PostgreSQL', 'RESTful API', 'Full Stack', 'Backend'],
+  keywords: [
+    "React.js",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "PostgreSQL",
+    "RESTful API",
+    "Full Stack",
+    "Backend",
+  ],
   details: [
-    ['Name', 'Kamesh Kamalakannan'], ['Location', 'Kumbakonam, Tamil Nadu'], ['Degree', 'B.Sc. Computer Science'],
-    ['University', 'SASTRA Deemed to be University'], ['Graduation', '2027'], ['Career Interest', 'Full Stack / Backend Development'],
+    ["Name", "Kamesh Kamalakannan"],
+    ["Location", "Kumbakonam, Tamil Nadu"],
+    ["Degree", "B.Sc. Computer Science"],
+    ["University", "SASTRA Deemed to be University"],
+    ["Graduation", "2027"],
+    ["Career Interest", "Full Stack / Backend Development"],
   ],
-}
+};
 
-export const nav = ['Home', 'About', 'Skills'/*,'Education'*/, 'Projects', /*'Certifications',*/ 'Contact']
+export const nav = [
+  "Home",
+  "About",
+  "Skills" /*,'Education'*/,
+  "Projects",
+  /*'Certifications',*/ "Contact",
+];
 
 export const skillCategories = [
   {
@@ -106,9 +168,15 @@ export const skillCategories = [
   },
 ];
 
-export const education = [{
-  school: 'SASTRA Deemed to be University', degree: 'B.Sc. Computer Science', years: '2024 – 2027', score: '74%', place: 'Kumbakonam, Tamil Nadu',
-}]
+export const education = [
+  {
+    school: "SASTRA Deemed to be University",
+    degree: "B.Sc. Computer Science",
+    years: "2024 – 2027",
+    score: "74%",
+    place: "Kumbakonam, Tamil Nadu",
+  },
+];
 
 // github / demo / image: leave '' until real URLs / files exist
 export const projects = [
@@ -191,9 +259,21 @@ export const projects = [
 ];
 
 export const certifications = [
-  { title: 'Database Management Systems (DBMS)', provider: 'NPTEL', year: '2026', url: '', image: '/images/nptel.jpg' },
-  { title: 'React Foundation', provider: 'Simplilearn SkillUp', year: '2026', url: '', image: '' },
-]
+  {
+    title: "Database Management Systems (DBMS)",
+    provider: "NPTEL",
+    year: "2026",
+    url: "",
+    image: "/images/nptel.jpg",
+  },
+  {
+    title: "React Foundation",
+    provider: "Simplilearn SkillUp",
+    year: "2026",
+    url: "",
+    image: "",
+  },
+];
 
 export const softSkills = [
   // {n: "LeetCode", i: SiLeetcode},

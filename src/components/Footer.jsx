@@ -1,10 +1,10 @@
 import { ArrowUp, Mail } from 'lucide-react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin,FaInstagram} from 'react-icons/fa'
 import { nav, links } from '../data/portfolioData'
 import { scrollTo } from './ui'
 
 export default function Footer() {
-  const social = [[FaGithub, links.github, 'GitHub'], [FaLinkedin, links.linkedin, 'LinkedIn'], [Mail, `mailto:${links.email}`, 'Email']].filter(([, h]) => h)
+  const social = [[FaGithub, links.github, 'GitHub'], [FaLinkedin, links.linkedin, 'LinkedIn'], [Mail, `mailto:${links.email}`, 'Email'],  [FaInstagram, links.Instagram, "Instagram"]].filter(([, h]) => h)
   return (
     <footer className="border-t" style={{ borderColor: 'rgb(var(--fg) / .1)' }}>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-12 text-center">

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2, AlertCircle, ExternalLink } from 'lucide-react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin,FaInstagram} from 'react-icons/fa'
 import { links, profile } from '../data/portfolioData'
 import { Reveal, SectionTitle } from './ui'
 
@@ -99,10 +99,11 @@ export default function Contact() {
   ]
 
   const social = [
-    [FaGithub, links.github, 'GitHub'],
-    [FaLinkedin, links.linkedin, 'LinkedIn'],
-    [Mail, `mailto:${links.email}`, 'Email'],
-  ]
+    [FaGithub, links.github, "GitHub"],
+    [FaLinkedin, links.linkedin, "LinkedIn"],
+    [Mail, `mailto:${links.email}`, "Email"],
+    [FaInstagram, links.Instagram, "Instagram"],
+  ];
 
   return (
     <section id="contact" className="section">
