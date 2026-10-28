@@ -45,7 +45,7 @@ export const links = {
   email: "kameshkamalakannan6@gmail.com",
     instagram: "https://www.instagram.com/kamesh._6",
   phone: "+91 9361782205",
-  resume: "./src/data/resume.pdf",
+  resume: "/images/resume.pdf",
   Instagram: "https://www.instagram.com/kamesh._.6",
 };
 
