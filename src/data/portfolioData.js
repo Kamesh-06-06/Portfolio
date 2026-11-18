@@ -188,7 +188,7 @@ export const projects = [
     icon: Trophy,
     image: "/images/quiz.png",
     github: "https://github.com/Kamesh-06-06/Quiz",
-    demo: "quiz-6lrm.vercel.app/",
+    demo: "https://quiz-6lrm.vercel.app/",
     stack: [
       "React.js",
       "Tailwind CSS",
