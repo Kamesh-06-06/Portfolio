@@ -23,30 +23,86 @@ function LinkBtn({ href, icon: Icon, label }) {
     : <span aria-disabled="true" title="Link not available yet" className="btn-off !min-h-0 py-2"><Icon size={16} />{label}</span>
 }
 
-function Card({ p, onZoom }) {
-  const [open, setOpen] = useState(false)
+
+function Card({p, onZoom}) {
+  const [open, setOpen] = useState(false);
+
   return (
     <Tilt>
-      <article className={`group glass glow-hover flex h-full flex-col overflow-hidden ${p.featured ? 'ring-1 ring-violet/60' : ''}`}>
-        <button onClick={() => onZoom(p)} aria-label={`Enlarge ${p.title} screenshot`} className="relative block h-48 w-full overflow-hidden">
-          <Shot p={p} className="h-full w-full transition-transform duration-500 group-hover:scale-110" />
-          {p.featured && <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-violet to-electric px-3 py-1 text-xs font-semibold text-white">Featured</span>}
+      <article
+        className={`group glass glow-hover flex h-full min-h-[570px] flex-col overflow-hidden ${
+          p.featured ? "ring-1 ring-violet/60" : ""
+        }`}
+      >
+        {/* Project Image */}
+        <button
+          onClick={() => onZoom(p)}
+          aria-label={`Enlarge ${p.title} screenshot`}
+          className="relative block h-52 w-full shrink-0 overflow-hidden"
+        >
+          <Shot
+            p={p}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+
+          {p.featured && (
+            <span className="absolute left-3 top-3 rounded-full bg-gradient-to-r from-violet to-electric px-3 py-1 text-xs font-semibold text-white">
+              Featured
+            </span>
+          )}
         </button>
+
+        {/* Project Details */}
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="text-xl font-bold">{p.title}</h3>
-          <p className="text-sm text-aqua">{p.subtitle}</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{p.description}</p>
-          <ul className="mt-4 flex flex-wrap gap-2">{p.stack.map((s) => <li key={s} className="chip transition hover:-translate-y-0.5">{s}</li>)}</ul>
-          <button onClick={() => setOpen(!open)} aria-expanded={open} className="mt-4 inline-flex items-center gap-1 self-start text-sm font-semibold text-violet">
-            Key features <ChevronDown size={16} className={`transition ${open ? 'rotate-180' : ''}`} />
+          <h3 className="text-xl font-bold min-h-[56px]">{p.title}</h3>
+
+          <p className="text-sm text-aqua min-h-[40px]">{p.subtitle}</p>
+
+          <p className="mt-3 min-h-[96px] text-sm leading-relaxed text-muted">
+            {p.description}
+          </p>
+
+          {/* Technologies */}
+          <ul className="mt-4 flex min-h-[64px] flex-wrap content-start gap-2">
+            {p.stack.map((s) => (
+              <li key={s} className="chip">
+                {s}
+              </li>
+            ))}
+          </ul>
+
+          {/* Features */}
+          <button
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            className="mt-4 inline-flex items-center gap-1 self-start text-sm font-semibold text-violet"
+          >
+            Key features
+            <ChevronDown
+              size={16}
+              className={`transition ${open ? "rotate-180" : ""}`}
+            />
           </button>
+
           <AnimatePresence initial={false}>
             {open && (
-              <motion.ul initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden text-sm text-muted">
-                {p.features.map((f) => <li key={f} className="mt-2 flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />{f}</li>)}
+              <motion.ul
+                initial={{height: 0, opacity: 0}}
+                animate={{height: "auto", opacity: 1}}
+                exit={{height: 0, opacity: 0}}
+                className="overflow-hidden text-sm text-muted"
+              >
+                {p.features.map((f) => (
+                  <li key={f} className="mt-2 flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua" />
+                    {f}
+                  </li>
+                ))}
               </motion.ul>
             )}
           </AnimatePresence>
+
+          {/* Buttons */}
           <div className="mt-auto flex flex-wrap gap-3 pt-6">
             <LinkBtn href={p.github} icon={FaGithub} label="GitHub" />
             <LinkBtn href={p.demo} icon={ExternalLink} label="Live Demo" />
@@ -54,8 +110,9 @@ function Card({ p, onZoom }) {
         </div>
       </article>
     </Tilt>
-  )
+  );
 }
+
 
 export default function Projects() {
   const [cat, setCat] = useState('All')
@@ -71,10 +128,13 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section">
-      <SectionTitle title="Featured Projects" subtitle="A selection of applications I've built while learning and developing my software engineering skills." />
+      <SectionTitle
+        title="Featured Projects"
+        subtitle="A selection of applications I've built while learning and developing my software engineering skills."
+      />
       <Reveal className="mb-10 flex flex-wrap justify-center gap-2">
         {cats.map((c) => {
-          const isSelected = cat === c
+          const isSelected = cat === c;
           return (
             <button
               key={c}
@@ -86,12 +146,12 @@ export default function Projects() {
                 <motion.span
                   layoutId="activeProjectTab"
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-violet to-electric shadow-lg shadow-violet/30"
-                  transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+                  transition={{type: "spring", stiffness: 350, damping: 28}}
                 />
               )}
               <span
                 className={`relative z-10 transition-colors ${
-                  isSelected ? 'text-white' : 'text-muted hover:text-fg'
+                  isSelected ? "text-white" : "text-muted hover:text-fg"
                 }`}
               >
                 {c}
@@ -99,17 +159,27 @@ export default function Projects() {
               {!isSelected && (
                 <span
                   className="absolute inset-0 rounded-full border"
-                  style={{ borderColor: 'rgb(var(--fg) / .15)' }}
+                  style={{borderColor: "rgb(var(--fg) / .15)"}}
                 />
               )}
             </button>
-          )
+          );
         })}
       </Reveal>
-      <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        layout
+        className="grid items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
         <AnimatePresence mode="popLayout">
           {list.map((p) => (
-            <motion.div layout key={p.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: .9 }} transition={{ duration: .35 }}>
+            <motion.div
+              layout
+              key={p.id}
+              initial={{opacity: 0, y: 20}}
+              animate={{opacity: 1, y: 0}}
+              exit={{opacity: 0, scale: 0.9}}
+              transition={{duration: 0.35}}
+            >
               <Card p={p} onZoom={setZoom} />
             </motion.div>
           ))}
@@ -117,15 +187,34 @@ export default function Projects() {
       </motion.div>
       <AnimatePresence>
         {zoom && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setZoom(null)}
-            role="dialog" aria-modal="true" aria-label={`${zoom.title} screenshot`} className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4">
-            <button aria-label="Close" onClick={() => setZoom(null)} className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white"><X /></button>
-            <motion.div initial={{ scale: .9 }} animate={{ scale: 1 }} onClick={(e) => e.stopPropagation()} className="w-full max-w-3xl overflow-hidden rounded-2xl">
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            onClick={() => setZoom(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${zoom.title} screenshot`}
+            className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4"
+          >
+            <button
+              aria-label="Close"
+              onClick={() => setZoom(null)}
+              className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white"
+            >
+              <X />
+            </button>
+            <motion.div
+              initial={{scale: 0.9}}
+              animate={{scale: 1}}
+              onClick={(e) => e.stopPropagation()}
+              className="w-full max-w-3xl overflow-hidden rounded-2xl"
+            >
               <Shot p={zoom} className="aspect-video w-full" />
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </section>
-  )
+  );
 }

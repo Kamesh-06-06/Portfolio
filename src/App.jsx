@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import BackgroundEffects from "./components/BackgroundEffects";
+import Achievements from "./components/Achievements";
 
 function getTheme() {
   try {
@@ -79,6 +80,7 @@ export default function App() {
         {/* <Education /> */}
         <Projects />
         {/* <Certifications /> */}
+        <Achievements/>
         <SoftSkills />
         <Contact />
       </main>

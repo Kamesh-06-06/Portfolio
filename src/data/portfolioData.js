@@ -37,6 +37,7 @@ import {
   Globe,
   Instagram,
 } from "lucide-react";
+import { title } from "framer-motion/client";
 
 // ---- Edit links here. Empty string = shown as "unavailable" in the UI. ----
 export const links = {
@@ -92,6 +93,7 @@ export const nav = [
   "About",
   "Skills" /*,'Education'*/,
   "Projects",
+  "Achievements",
   /*'Certifications',*/ "Contact",
 ];
 
@@ -272,6 +274,20 @@ export const certifications = [
     year: "2026",
     url: "",
     image: "",
+  },
+];
+export const achievements = [
+  {
+    title: "GeeksForGeeks",
+    description:"• Solved 275+ coding problems on GeeksforGeeks, strengthening Data Structures, Algorithms, and problem-solving skills.",
+    url: "https://www.geeksforgeeks.org/profile/kamesh06?tab=activity",
+    icon:SiGeeksforgeeks,
+  },
+  {
+    title: "Leetcode",
+    description:"• Solved 100+ coding problems on LeetCode, improving programming logic and algorithmic thinking.",
+    url: "https://leetcode.com/u/Kamesh06/",
+    icon: SiLeetcode,
   },
 ];
 
